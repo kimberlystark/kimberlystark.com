@@ -3,7 +3,7 @@ import logo from './Vector.png'
 export default function Navbar(props) {
 
     return (
-        <section className="Navbar flex container">
+        <section className="Navbar flex">
             <div className="Navbar__logo flex">
                 <a href='/'><img src={logo} alt="logo" /></a>
                 <h1>Kimberly Stark</h1>

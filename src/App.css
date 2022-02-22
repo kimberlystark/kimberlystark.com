@@ -3,12 +3,18 @@
 .App {
   color: var(--text-primary);
   background-color: var(--background);
-  /* padding-left: 20px;
-  padding-right: 20px; */
-  overflow-x: hidden;
+  padding-left: 2rem;
+  padding-right: 2rem;
   transition: all 0.5s;
   width: 100%;
+  height: auto;
 }
+
+* {
+  box-sizing: border-box;
+  /* border: solid red 2px; */
+}
+
 .theme--button {
   color: var(--text-primary);
   background-color: var(--background);
@@ -19,6 +25,7 @@
   height: fit-content;
   padding: 0.6rem;
   font-family: "Lato", sans-serif;
+  margin: 1rem;
 }
 
 /* LINKS */
@@ -35,16 +42,15 @@ a:hover {
 /* UTILITIES */
 
 .container {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   margin: 0 auto;
   padding: 2rem;
+  width: 75%;
 }
 
-/* .container > * {
+.container > * {
   width: 100%;
-} */
+}
 .flex {
   display: flex;
 }
@@ -66,6 +72,7 @@ li {
 .title {
   font-size: 3.2rem;
   text-transform: uppercase;
+  word-spacing: 0.7rem;
 }
 .paragraph {
   font-size: 1.6rem;
@@ -77,9 +84,12 @@ li {
   margin: 0;
   padding: 0;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
+  top: 0;
+  flex-wrap: wrap;
   background-color: var(--background);
-  /* position: fixed; */
+  position: -webkit-sticky;
+  position: sticky;
   z-index: 100;
   height: auto;
 }
@@ -92,7 +102,7 @@ li {
 
 .Navbar__logo img {
   height: 2.6rem;
-  top: 1.5rem;
+  /* top: 1.5rem; */
   margin-left: 1rem;
 }
 .Navbar__logo > h1 {
@@ -109,12 +119,9 @@ li {
   font-size: 1.6rem;
   margin-left: 4rem;
 }
-.Navbar > button {
-  margin-right: 1rem;
-}
+
 /* HERO */
 .Hero {
-  /* /* margin-left: 15%; * */
   padding-top: 10%;
   height: 90vh;
   justify-content: center;
@@ -131,7 +138,7 @@ li {
   font-size: 7rem;
   width: auto;
   text-align: center;
-  animation: pulse infinite linear 3s;
+  animation: pulse infinite linear 2.5s;
   cursor: pointer;
 }
 
@@ -140,20 +147,16 @@ li {
     font-size: 7rem;
   }
   50% {
-    font-size: 8rem;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
   }
   100% {
     font-size: 7rem;
   }
 }
-/* Arrow 1 */
-
-/* position: absolute;
-width: 145px;
-height: 0px;
-border: 3px solid #000000;
-box-sizing: border-box;
-transform: rotate(90deg); */
 
 /* ABOUT */
 .About {
@@ -161,33 +164,34 @@ transform: rotate(90deg); */
   align-items: flex-start;
 }
 
-.About > h2 {
-  font-size: 2rem;
+.About > a {
+  font-size: 1.5rem;
 }
 
 /* WORKS */
 .Works {
   height: auto;
+  /* border: red solid 2px; */
 }
-
-.Works__selected {
-  flex-wrap: wrap;
-  /* gap: 3rem; */
+/* .Works__selected */
+.Works__selected--item {
+  width: 100%;
 }
-.selected--item {
-  height: 30rem;
-  width: 50rem;
+.item--image {
+  height: 35rem;
+  width: 100%;
   border: solid 1px var(--text-primary);
   border-radius: 0.5rem;
   cursor: pointer;
   transition: 0.3s linear;
   /* position: relative; */
   color: #eee;
-  margin: 2rem;
+  margin: 0;
   background-size: cover;
   background-repeat: no-repeat;
+  /* border: red solid 2px; */
 }
-.selected--item:hover {
+.item--image:hover {
   box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
@@ -198,25 +202,30 @@ transform: rotate(90deg); */
   -o-transform: scale(1.1);
 }
 
-/* .selected--item:active {
-  height: 31rem;
-  width: 52vw;
-} */
-.selected--item > image {
-  position: absolute;
-  height: auto;
-  width: 100%;
-}
-
-.about--item {
+.item--about {
   margin: 5rem;
   text-align: left;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 20vw;
+  height: 40vh;
+  position: absolute;
+  right: 15rem;
+  color: #222;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
 }
-.about--item > h2 {
+.item--about > h2 {
   font-size: 3.2rem;
+  text-align: center;
 }
-.about--item > p {
+.item--about > p {
   font-size: 1.6rem;
+  text-align: center;
 }
 
 /* CONTACT */
@@ -271,11 +280,111 @@ transform: rotate(90deg); */
 }
 
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   .Navbar a {
     float: none;
     display: block;
     width: 100%;
     text-align: left; /* If you want the text to be left-aligned on small screens */
+/* } */
+/* } */
+
+@media screen and (max-width: 640px) {
+  .Navbar {
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+  .Navbar__logo {
+    flex-direction: column;
+  }
+  .Navbar__logo > a {
+    padding: 1rem;
+  }
+  .Navbar__logo > h1 {
+    padding: 0;
+    margin: 0;
+  }
+  .Navbar ul {
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+  .Navbar li {
+    margin-left: 0;
+    padding: 2rem;
+  }
+  .Navbar > button {
+    position: absolute;
+    right: 0;
+  }
+  /* MEDIA HERO */
+  .Hero {
+    justify-content: flex-start;
+    padding-top: 0;
+    height: auto;
+  }
+  .Hero > h1,
+  .Hero > span {
+    font-size: 4.2rem;
+  }
+  /* MEDIA ABOUT */
+  .About {
+    word-spacing: 0.3rem;
+    line-height: 2.2rem;
+  }
+
+  /* MEDIA WORKS */
+  .Works {
+    width: 100%;
+  }
+  .Works__selected {
+    width: 100%;
+  }
+  .Works__selected--item {
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .item--image {
+    width: 100%;
+    height: 30rem;
+    margin: 0;
+  }
+  .item--about {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
+    height: 50%;
+    width: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+  }
+  .item--about > h2 {
+    margin-bottom: 0;
+  }
+
+  /* MEDIA CONTACT */
+  .Contact {
+    flex-direction: column-reverse;
+    height: auto;
+    padding-top: 0;
+    margin-bottom: 2rem;
+  }
+  .Contact > h1 {
+    font-size: 4.2rem;
+  }
+  /* MEDIA FOOTER */
+  .Footer__social {
+    flex-direction: column;
   }
 }

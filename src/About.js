@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <section id="About" className="About flex-column container">
+        <section id="About" className="About flex-column container  ">
             <h1 className="title">ABOUT ME</h1>
             <p className="paragraph">I love the way things move and flow together.  I am passionate about creating smart experiences that are intuitive, inclusive and lead you on a delightful journey. My background in fine-arts, anthropology and education give me a unique perspective and creative outlook when developing user experiences and interfaces. </p>
             <a><h2>Resume</h2></a>

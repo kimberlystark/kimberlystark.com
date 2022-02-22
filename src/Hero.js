@@ -2,7 +2,7 @@
 export default function Hero() {
     return (
         <section className="Hero flex-column container">
-            <h1 className="Hero__intro">Hi, I'm Kimberly.
+            <h1 className="Hero__intro">Hi, I'm Kimberly,
                 <br />
                 I'm a <span>UX/UI Designer.</span>
             </h1>
