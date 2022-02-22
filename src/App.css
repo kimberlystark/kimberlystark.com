@@ -1,11 +1,13 @@
 /* LIGHT/DARK MODE */
+
 .App {
   color: var(--text-primary);
   background-color: var(--background);
-  padding-left: 20px;
-  padding-right: 20px;
-  /* height: calc(100vh - 40px); */
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  overflow-x: hidden;
   transition: all 0.5s;
+  width: 100%;
 }
 .theme--button {
   color: var(--text-primary);
@@ -36,13 +38,13 @@ a:hover {
   width: 100vw;
   height: 100vh;
   display: flex;
-  max-width: 80rem;
   margin: 0 auto;
   padding: 2rem;
 }
-.container > * {
+
+/* .container > * {
   width: 100%;
-}
+} */
 .flex {
   display: flex;
 }
@@ -57,6 +59,10 @@ a:hover {
   flex-direction: column;
 }
 
+li {
+  text-decoration: none;
+}
+
 .title {
   font-size: 3.2rem;
   text-transform: uppercase;
@@ -69,9 +75,15 @@ a:hover {
   justify-content: space-between;
   border-bottom: #333 solid 1px;
   margin: 0;
+  padding: 0;
   align-items: center;
+  width: 100%;
+  background-color: var(--background);
   /* position: fixed; */
+  z-index: 100;
+  height: auto;
 }
+
 .Navbar__logo {
   margin: 0;
   font-size: 1.8rem;
@@ -80,7 +92,12 @@ a:hover {
 
 .Navbar__logo img {
   height: 2.6rem;
-  margin-right: 1rem;
+  top: 1.5rem;
+  margin-left: 1rem;
+}
+.Navbar__logo > h1 {
+  font-size: 2rem;
+  margin-left: 3rem;
 }
 .Navbar__list {
   margin: 0;
@@ -90,15 +107,17 @@ a:hover {
 
 .Navbar__list li {
   font-size: 1.6rem;
-  margin-left: 2rem;
+  margin-left: 4rem;
 }
-
+.Navbar > button {
+  margin-right: 1rem;
+}
 /* HERO */
 .Hero {
-  /* height: 70vh; */
   /* /* margin-left: 15%; * */
   padding-top: 10%;
-  height: 80vh;
+  height: 90vh;
+  justify-content: center;
 }
 .Hero__intro {
   font-size: 6.2rem;
@@ -113,6 +132,7 @@ a:hover {
   width: auto;
   text-align: center;
   animation: pulse infinite linear 3s;
+  cursor: pointer;
 }
 
 @keyframes pulse {
@@ -141,29 +161,67 @@ transform: rotate(90deg); */
   align-items: flex-start;
 }
 
+.About > h2 {
+  font-size: 2rem;
+}
+
 /* WORKS */
+.Works {
+  height: auto;
+}
+
 .Works__selected {
   flex-wrap: wrap;
-  gap: 3rem;
+  /* gap: 3rem; */
 }
 .selected--item {
-  height: 25vh;
-  width: 20vw;
+  height: 30rem;
+  width: 50rem;
   border: solid 1px var(--text-primary);
   border-radius: 0.5rem;
   cursor: pointer;
   transition: 0.3s linear;
+  /* position: relative; */
+  color: #eee;
+  margin: 2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .selected--item:hover {
-  height: 26vh;
-  width: 21vw;
-  min-height: 30rem;
-  min-width: 30rem;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+/* .selected--item:active {
+  height: 31rem;
+  width: 52vw;
+} */
+.selected--item > image {
+  position: absolute;
+  height: auto;
+  width: 100%;
+}
+
+.about--item {
+  margin: 5rem;
+  text-align: left;
+}
+.about--item > h2 {
+  font-size: 3.2rem;
+}
+.about--item > p {
+  font-size: 1.6rem;
 }
 
 /* CONTACT */
 .Contact {
-  height: 60vh;
+  height: 80vh;
   align-items: center;
   justify-content: space-between;
 }
@@ -185,9 +243,14 @@ transform: rotate(90deg); */
 }
 .Contact__button:hover {
   color: #eee;
-  font-size: 2.6rem;
-  height: 16rem;
-  width: 16rem;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 /* FOOTER */
@@ -197,7 +260,22 @@ transform: rotate(90deg); */
   border-top: #333 solid 1px;
   padding: 20px;
 }
+.Footer > h1 {
+  font-weight: 500;
+  word-spacing: 2.2px;
+}
 
 .Footer__social > a {
   margin-left: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+@media screen and (max-width: 500px) {
+  .Navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left; /* If you want the text to be left-aligned on small screens */
+  }
 }

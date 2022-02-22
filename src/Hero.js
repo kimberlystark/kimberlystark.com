@@ -1,13 +1,13 @@
 
 export default function Hero() {
     return (
-        <section className="Hero container flex-column">
-            <h1 className="Hero__intro">Hi, I'm Kimberly
+        <section className="Hero flex-column container">
+            <h1 className="Hero__intro">Hi, I'm Kimberly.
                 <br />
-                i'm a <span>UX/UI Designer.</span>
+                I'm a <span>UX/UI Designer.</span>
             </h1>
 
-            <div className="arrow-down">&darr;</div>
+            <a href="#About"><div className="arrow-down">&darr;</div></a>
         </section>
     )
 }
