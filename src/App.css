@@ -120,44 +120,6 @@ li {
   margin-left: 4rem;
 }
 
-/* HERO */
-.Hero {
-  padding-top: 10%;
-  height: 90vh;
-  justify-content: center;
-}
-.Hero__intro {
-  font-size: 6.2rem;
-}
-.Hero__intro > span {
-  font-size: 5.6rem;
-  color: var(--hover-color);
-}
-
-.arrow-down {
-  font-size: 7rem;
-  width: auto;
-  text-align: center;
-  animation: pulse infinite linear 2.5s;
-  cursor: pointer;
-}
-
-@keyframes pulse {
-  0% {
-    font-size: 7rem;
-  }
-  50% {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-  }
-  100% {
-    font-size: 7rem;
-  }
-}
-
 /* ABOUT */
 .About {
   height: auto;

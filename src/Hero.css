@@ -1,4 +1,4 @@
-/* HERO */
+/* INTRO TEXT */
 .Hero {
   padding-top: 10%;
   height: 90vh;
@@ -12,6 +12,7 @@
   color: var(--hover-color);
 }
 
+/* ARROW */
 .arrow-down {
   font-size: 7rem;
   width: auto;
