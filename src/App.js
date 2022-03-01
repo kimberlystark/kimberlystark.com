@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 
 import useLocalStorage from "react-use-localstorage"
-import './App.css'
+import './app.css'
 import Navbar from './Navbar'
 import Hero from './Hero'
 import About from './About'
