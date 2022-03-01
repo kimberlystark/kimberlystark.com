@@ -1,8 +1,9 @@
 /* NAV */
 .theme--button {
   color: var(--text-primary);
-  background-color: var(--background);
-  border: 1px var(--text-primary) solid;
+  background-color: transparent;
+  /* border: 1px var(--text-primary) solid; */
+  border: none;
   transition: all 0.5s;
   cursor: pointer;
   border-radius: 0.5rem;
@@ -10,6 +11,7 @@
   padding: 0.6rem;
   font-family: "Lato", sans-serif;
   margin: 1rem;
+  font-size: 2rem;
 }
 
 .Navbar {
