@@ -1,6 +1,7 @@
 :root {
   font-size: 62.5%;
   --background: #eee;
+  --background-transparent: rgba(238, 238, 238, 0.7);
   --text-primary: #333;
   --text-secondary: rgb(182, 73, 61);
   --accent: salmon;
@@ -8,6 +9,7 @@
 }
 [data-theme="dark"] {
   --background: #222;
+  --background-transparent: rgba(34, 34, 34, 0.7);
   --text-primary: #eee;
   --text-secondary: grey;
   --accent: salmon;

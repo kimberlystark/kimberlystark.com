@@ -1,0 +1,62 @@
+/* NAV */
+.theme--button {
+  color: var(--text-primary);
+  background-color: var(--background);
+  border: 1px var(--text-primary) solid;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  height: fit-content;
+  padding: 0.6rem;
+  font-family: "Lato", sans-serif;
+  margin: 1rem;
+}
+
+.Navbar {
+  justify-content: space-between;
+  border-bottom: #333 solid 1px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  /* width: 100%; */
+  top: 0;
+  flex-wrap: wrap;
+  /* background-color: var(--background); */
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  height: auto;
+  background: var(--background-transparent);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+/* .fa-moon {
+  color: black;
+  font-size: 200px;
+} */
+.Navbar__logo {
+  margin: 0;
+  font-size: 1.8rem;
+  align-items: center;
+}
+
+.Navbar__logo img {
+  height: 2.6rem;
+  /* top: 1.5rem; */
+  margin-left: 1rem;
+}
+.Navbar__logo > h1 {
+  font-size: 2rem;
+  margin-left: 3rem;
+}
+.Navbar__list {
+  margin: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.Navbar__list li {
+  font-size: 1.6rem;
+  margin-left: 4rem;
+}

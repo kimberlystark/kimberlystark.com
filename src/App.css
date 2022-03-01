@@ -15,7 +15,7 @@
   /* border: solid red 2px; */
 }
 
-.theme--button {
+/* .theme--button {
   color: var(--text-primary);
   background-color: var(--background);
   border: 1px var(--text-primary) solid;
@@ -26,7 +26,7 @@
   padding: 0.6rem;
   font-family: "Lato", sans-serif;
   margin: 1rem;
-}
+} */
 
 /* LINKS */
 a {
@@ -77,48 +77,6 @@ li {
 .paragraph {
   font-size: 1.6rem;
 }
-/* NAV */
-.Navbar {
-  justify-content: space-between;
-  border-bottom: #333 solid 1px;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  /* width: 100%; */
-  top: 0;
-  flex-wrap: wrap;
-  background-color: var(--background);
-  position: -webkit-sticky;
-  position: sticky;
-  z-index: 100;
-  height: auto;
-}
-
-.Navbar__logo {
-  margin: 0;
-  font-size: 1.8rem;
-  align-items: center;
-}
-
-.Navbar__logo img {
-  height: 2.6rem;
-  /* top: 1.5rem; */
-  margin-left: 1rem;
-}
-.Navbar__logo > h1 {
-  font-size: 2rem;
-  margin-left: 3rem;
-}
-.Navbar__list {
-  margin: 0;
-  list-style: none;
-  align-items: center;
-}
-
-.Navbar__list li {
-  font-size: 1.6rem;
-  margin-left: 4rem;
-}
 
 /* ABOUT */
 .About {
@@ -128,66 +86,6 @@ li {
 
 .About > a {
   font-size: 1.5rem;
-}
-
-/* WORKS */
-.Works {
-  height: auto;
-  /* border: red solid 2px; */
-}
-/* .Works__selected */
-.Works__selected--item {
-  width: 100%;
-}
-.item--image {
-  height: 35rem;
-  width: 100%;
-  border: solid 1px var(--text-primary);
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: 0.3s linear;
-  /* position: relative; */
-  color: #eee;
-  margin: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  /* border: red solid 2px; */
-}
-.item--image:hover {
-  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-}
-
-.item--about {
-  margin: 5rem;
-  text-align: left;
-  background: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  width: 20vw;
-  height: 40vh;
-  position: absolute;
-  right: 15rem;
-  color: #222;
-  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
-}
-.item--about > h2 {
-  font-size: 3.2rem;
-  text-align: center;
-}
-.item--about > p {
-  font-size: 1.6rem;
-  text-align: center;
 }
 
 /* CONTACT */
