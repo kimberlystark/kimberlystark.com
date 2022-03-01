@@ -1,0 +1,9 @@
+/* ABOUT */
+.About {
+  height: auto;
+  align-items: flex-start;
+}
+
+.About > a {
+  font-size: 1.5rem;
+}

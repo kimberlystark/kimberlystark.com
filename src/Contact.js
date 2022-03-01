@@ -1,3 +1,4 @@
+import './contact.css'
 export default function Contact() {
     return (
         <section id="Contact" className="Contact flex-center container">
