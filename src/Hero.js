@@ -1,4 +1,4 @@
-import './Hero.css';
+import './hero.css';
 import TypeIt from "typeit-react";
 
 export default function Hero() {
