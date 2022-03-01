@@ -20,7 +20,7 @@
   margin: 0;
   padding: 0;
   align-items: center;
-  /* width: 100%; */
+  width: 100%;
   top: 0;
   flex-wrap: wrap;
   /* background-color: var(--background); */
@@ -33,10 +33,6 @@
   backdrop-filter: blur(4px);
 }
 
-/* .fa-moon {
-  color: black;
-  font-size: 200px;
-} */
 .Navbar__logo {
   margin: 0;
   font-size: 1.8rem;

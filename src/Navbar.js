@@ -25,4 +25,3 @@ export default function Navbar(props) {
         </section>
     )
 }
-// <FontAwesomeIcon icon="fa-solid fa-moon" />

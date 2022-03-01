@@ -65,6 +65,8 @@ li {
   font-size: 1.6rem;
 }
 
+/* MEDIA QUERIES */
+
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
 /* @media screen and (max-width: 500px) {
   .Navbar a {
@@ -79,9 +81,13 @@ li {
   .Navbar {
     margin-top: 1rem;
     flex-direction: column;
+    background-color: pink;
   }
   .Navbar__logo {
     flex-direction: column;
+    margin-left: 0;
+    border: red solid 1px;
+    text-align: center;
   }
   .Navbar__logo > a {
     padding: 1rem;
@@ -89,15 +95,22 @@ li {
   .Navbar__logo > h1 {
     padding: 0;
     margin: 0;
+    border: red solid 1px;
+    padding-right: 5px;
   }
   .Navbar ul {
     justify-content: space-between;
     padding: 0;
     margin: 0;
+    border: red solid 1px;
+  }
+  .Navbar li:nth-child(1) {
+    margin-left: 0;
   }
   .Navbar li {
     margin-left: 0;
     padding: 2rem;
+    border: red solid 1px;
   }
   .Navbar > button {
     position: absolute;
@@ -170,7 +183,13 @@ li {
     font-size: 4.2rem;
   }
   /* MEDIA FOOTER */
+  .Footer {
+    flex-direction: column-reverse;
+  }
   .Footer__social {
-    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .Footer__social > :nth-child(1) {
+    margin-left: 0;
   }
 }
