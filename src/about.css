@@ -2,6 +2,7 @@
 .About {
   height: auto;
   align-items: flex-start;
+  width: 100%;
 }
 .About > * {
   margin-block: 2rem;
