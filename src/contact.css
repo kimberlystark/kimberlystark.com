@@ -9,7 +9,6 @@
 }
 .Contact__button {
   background-color: var(--hover-color);
-  color: var(--text-primary);
   font-size: 2.5rem;
   border-radius: 50%;
   height: 15rem;
@@ -30,4 +29,18 @@
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
+}
+
+/* MEDIA CONTACT */
+@media (min-width: 20em) and (max-width: 30em) {
+  .Contact {
+    flex-direction: column-reverse;
+    height: auto;
+    padding-top: 0;
+    margin-bottom: 2rem;
+  }
+  .Contact > h1 {
+    font-size: 4.2rem;
+    margin-bottom: 3rem;
+  }
 }

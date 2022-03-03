@@ -3,7 +3,9 @@
   padding-top: 10%;
   height: 90vh;
   justify-content: center;
+  border: red solid 1px;
 }
+
 .Hero__intro {
   font-size: 6.2rem;
 }
@@ -19,6 +21,7 @@
   text-align: center;
   animation: pulse infinite linear 2.5s;
   cursor: pointer;
+  border: red solid 1px;
 }
 
 @keyframes pulse {
@@ -34,5 +37,20 @@
   }
   100% {
     font-size: 7rem;
+  }
+}
+
+@media (min-width: 20em) and (max-width: 40em) {
+  /* MEDIA HERO */
+  .Hero {
+    justify-content: center;
+    align-content: center;
+    padding-top: 20%;
+    height: auto;
+  }
+
+  .Hero__intro,
+  .Hero__intro > .type-it {
+    font-size: 4.2rem;
   }
 }

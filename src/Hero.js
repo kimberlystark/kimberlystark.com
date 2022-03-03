@@ -7,7 +7,7 @@ export default function Hero() {
         <section className="Hero flex-column container">
             <h1 className="Hero__intro">Hi, I'm Kimberly.
                 <br />
-                I'm a <TypeIt
+                I'm a <TypeIt className="type-it"
                     options={{
                         cursor: false,
                         loop: false
@@ -25,7 +25,7 @@ export default function Hero() {
                 />
             </h1>
 
-            <a href="#About"><div className="arrow-down">&darr;</div></a>
+            <a href="#About" className='flex-center'><div className="arrow-down">&darr;</div></a>
         </section>
     )
 }

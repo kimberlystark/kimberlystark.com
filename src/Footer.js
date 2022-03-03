@@ -5,14 +5,14 @@ import { faGithub, faBehance, faCodepen, faLinkedinIn, faDribbble } from '@forta
 export default function Footer() {
     return (
         <section className="Footer flex">
-            <h1>Design & Code by Kimberly Stark &copy;2022 </h1>
-            <div className="Footer__social flex">
+            <h1 className='flex'>Design & Code by Kimberly Stark &copy;2022 </h1>
+            <div className="Footer__social flex-center">
 
-                <a href="https://github.com/kimberlystark"><FontAwesomeIcon icon={faGithub} /></a>
-                <a href="https://www.behance.net/kimberlystark"><FontAwesomeIcon icon={faBehance} /></a>
-                <a href="https://codepen.io/kimstark"><FontAwesomeIcon icon={faCodepen} /></a>
-                <a href="https://dribbble.com/kstark"><FontAwesomeIcon icon={faDribbble} /></a>
-                <a href="https://www.linkedin.com/in/wildyogini/"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                <FontAwesomeIcon href='' href="https://github.com/kimberlystark" className="icon" icon={faGithub} />
+                <FontAwesomeIcon href="https://www.behance.net/kimberlystark" className="icon" icon={faBehance} />
+                <FontAwesomeIcon href="https://codepen.io/kimstark" className="icon" icon={faCodepen} />
+                <FontAwesomeIcon href="https://dribbble.com/kstark" className="icon" icon={faDribbble} />
+                <FontAwesomeIcon href="https://www.linkedin.com/in/wildyogini/" className="icon" icon={faLinkedinIn} />
             </div>
         </section>
     )

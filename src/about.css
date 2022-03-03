@@ -3,7 +3,17 @@
   height: auto;
   align-items: flex-start;
 }
-
+.About > * {
+  margin-block: 2rem;
+}
 .About > a {
   font-size: 1.5rem;
+}
+
+@media (min-width: 20em) and (max-width: 40em) {
+  /* MEDIA ABOUT */
+  .About {
+    word-spacing: 0.3rem;
+    line-height: 2.2rem;
+  }
 }
