@@ -25,7 +25,7 @@ export default function Hero() {
                 />
             </h1>
 
-            <a href="#About" className='flex-center'><div className="arrow-down">&darr;</div></a>
+            <div className='arrow-container flex-center'> <a href="#About" className=' arrow-down'>&darr;</a></div>
         </section>
     )
 }
