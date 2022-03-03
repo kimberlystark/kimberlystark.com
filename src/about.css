@@ -8,6 +8,14 @@
 }
 .About > a {
   font-size: 1.5rem;
+  flex-direction: row;
+  width: fit-content;
+  text-align: center;
+  align-items: center;
+}
+a > .icon {
+  font-size: large;
+  margin-left: 1rem;
 }
 
 @media (min-width: 20em) and (max-width: 40em) {
