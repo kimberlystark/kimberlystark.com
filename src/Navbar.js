@@ -19,7 +19,7 @@ export default function Navbar(props) {
         query: '(min-width: 640px)'
     })
     const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+    const isMobile = useMediaQuery({ query: '(max-width: 640px)' })
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
 
@@ -31,17 +31,22 @@ export default function Navbar(props) {
     }
     return (
         <section className="Navbar flex">
-            <button onClick={handleToggle}>  {navbarOpen ? (
-                <MdClose className="hamburger" />
-            ) : (
-                <FiMenu className="hamburger" />
-            )}</button>
+            {isMobile &&
+                <button className="hamburger__btn" onClick={handleToggle}>  {navbarOpen ? (
+                    <MdClose className="hamburger" />
+                ) : (
+                    <FiMenu className="hamburger" />
+                )}</button>
+            }
             <div className="Navbar__logo flex">
-                <a href='/'><img src={logo} alt="logo" /></a>
+                <img href='#Hero' src={logo} alt="logo" />
                 <h1>Kimberly Stark</h1>
             </div>
 
-            <ul className={`flex Navbar__list menuNav ${navbarOpen ? " showMenu" : ""}`}>
+            <ul className={
+                `${navbarOpen ? "menuNav showMenu" : ""}
+                ${isMobile && "menuNav"}
+                ${isNotasSmall && "flex Navbar__list"}`}>
                 <li><a href="#About" activeClassName="active-link"
                     onClick={() => closeMenu()}
                     exact>About</a></li>
