@@ -2,7 +2,6 @@
 .About {
   height: auto;
   align-items: flex-start;
-  width: 100%;
 }
 .About > * {
   margin-block: 2rem;
@@ -24,5 +23,6 @@ a > .icon {
   .About {
     word-spacing: 0.3rem;
     line-height: 2.2rem;
+    width: 100%;
   }
 }
